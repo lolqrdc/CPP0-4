@@ -3,14 +3,16 @@ NAME = phoneBook
 
 # FLAGS
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinc
 RM = rm -f
 
 # FOLDER
 OBJ_DIR = obj
 
 # SOURCES
-SRCS = phoneBook.cpp
+SRCS = src/Contact.cpp \
+		src/main.cpp \
+		src/PhoneBook.cpp \
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
@@ -23,7 +25,7 @@ $(NAME): $(OBJS)
 	@echo "Compilation terminée."
 
 $(OBJ_DIR)/%.o: %.cpp
-	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
