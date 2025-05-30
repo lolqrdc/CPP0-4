@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:00:59 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/30 10:06:27 by lolq             ###   ########.fr       */
+/*   Updated: 2025/05/30 10:27:37 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,13 @@ int main()
             std::cin >> index;
             if (std::cin.fail())
             {
+                std::cout << "Invalid input: please enter a number." << std::endl;
                 std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            }
+            else if (index < 1 || index > phonebook.getNbContact())
+            {
+                std::cout << "Invalid index: please enter a value between 1 and " << phonebook.getNbContact() << "." << std::endl;
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             }
             else
