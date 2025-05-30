@@ -6,12 +6,26 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:00:59 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/30 10:27:37 by lolq             ###   ########.fr       */
+/*   Updated: 2025/05/30 10:38:54 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
+
+static std::string NoEmpty(const std::string& prompt)
+{
+    std::string input;
+    std::cout << prompt;
+    std::getline(std::cin, input);
+    while (input.empty())
+    {
+        std::cout << "This field cannot be empty. Please try again." << std::endl;
+        std::cout << prompt;
+        std::getline(std::cin, input);
+    }
+    return (input);
+}
 
 int main()
 {
@@ -27,26 +41,16 @@ int main()
         if (cmd == "ADD")
         {
             std::string firstName, lastName, nickname, phoneNum, secret;
-        
-            std::cout << "Enter first name: ";
-            std::getline(std::cin, firstName);
-            
-            std::cout << "Enter last name: ";
-            std::getline(std::cin, lastName);
 
-            std::cout << "Enter a nickname: ";
-            std::getline(std::cin, nickname);
-
-            std::cout << "Enter a phone number: ";
-            std::getline(std::cin, phoneNum);
-
-            std::cout << "Enter their darkest secret: ";
-            std::getline(std::cin, secret);
+            firstName = NoEmpty("Enter first name: ");
+            lastName = NoEmpty("Enter last name: ");
+            nickname = NoEmpty("Enter a nickname: ");
+            phoneNum = NoEmpty("Enter a phone number: ");
+            secret = NoEmpty("Enter their darkest secret: ");
 
             Contact NewContact(firstName, lastName, nickname, phoneNum, secret);
             phonebook.addContact(NewContact);
             std::cout << "Contact added !" << std::endl;
-            
         }
         else if (cmd == "SEARCH")
         {
