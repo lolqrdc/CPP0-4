@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:54:40 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/03 12:01:18 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/03 12:27:50 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void    Zombie::setNameZombie(const std::string &name)
 
 void    Zombie::announce()
 {
-    std::cout << name << ": BraiiiiiiinnnzzzZ" << std::endl;
+    std::cout << name << ": zZzZzZzZ" << std::endl;
 }
