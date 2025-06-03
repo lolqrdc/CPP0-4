@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 11:18:56 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/02 09:23:43 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/03 11:03:26 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ class Zombie
     // Methods
     void    announce();
 };
-//
+// Functions
 Zombie  *newZombie(std::string name);
 void    randomChump(std::string name);
