@@ -6,7 +6,14 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 11:18:49 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/30 11:18:50 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/02 09:26:50 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+void    randomChump(std::string name)
+{
+    Zombie z(name);
+    z.announce();
+}

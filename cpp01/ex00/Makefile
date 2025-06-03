@@ -10,7 +10,10 @@ RM = rm -f
 OBJ_DIR = obj
 
 # SOURCES
-SRCS = src/ \
+SRCS = src/Zombie.cpp \
+		src/main.cpp \
+		src/newZombie.cpp \
+		src/randomChump.cpp \
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
