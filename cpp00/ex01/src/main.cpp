@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 11:00:59 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/30 10:38:54 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/05 15:11:17 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ int main()
    {
         std::cout << "> ";
         std::getline(std::cin, cmd);
+        if (cmd.empty())
+        {
+            std::cout << "No command entered. Please enter ADD, SEARCH or EXIT." << std::endl;
+            continue ;
+        }
         if (cmd == "ADD")
         {
             std::string firstName, lastName, nickname, phoneNum, secret;
@@ -81,9 +86,7 @@ int main()
             break;
         }
         else
-        {
             std::cout << "Unknown command. Please use ADD, SEARCH, or EXIT." << std::endl;
-        }
    }
    return (0);
 }

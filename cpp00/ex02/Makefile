@@ -1,0 +1,37 @@
+# NAME 
+NAME = megaphone
+
+# FLAGS
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+RM = rm -f
+
+# FOLDER
+OBJ_DIR = obj
+
+# SOURCES
+SRCS = src/Account.cpp \
+
+OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
+
+# RULES
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@echo "Linking $(NAME)..."
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "Compilation terminée."
+
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	$(RM) -r $(OBJ_DIR)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
