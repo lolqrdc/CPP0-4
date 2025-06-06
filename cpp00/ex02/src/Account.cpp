@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 07:18:43 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/06 09:26:04 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/06 09:32:38 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ int     Account::checkAmount() const
 }
 
 // Implémentation des méthodes statiques
-
 int Account::getNbAccounts()
 {
     return (_nbAccounts);
