@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 07:18:43 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/06 09:16:58 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/06 09:26:04 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Account::Account(int initial_deposit)
     _displayTimestamp();
     std::cout << "index:" << _accountIndex 
             << ";amount:" << _amount
-            << ";created:" << std::endl;
+            << ";created" << std::endl;
 } 
 
 // Implémentation du destructeur
@@ -73,7 +73,7 @@ bool    Account::makeWithdrawal(int withdrawal)
         _displayTimestamp();
         std::cout << "index:" << _accountIndex
                     << ";p_amount:" << prev_amount
-                    << ";withdrawal: refused" << std::endl;
+                    << ";withdrawal:refused" << std::endl;
         return (false);
     }
     _amount -= withdrawal;
@@ -86,7 +86,7 @@ bool    Account::makeWithdrawal(int withdrawal)
                 << ";p_amount:" << prev_amount
                 << ";withdrawal:" << withdrawal
                 << ";amount:" << _amount
-                << ";nb_withdrawals" << _nbWithdrawals
+                << ";nb_withdrawals:" << _nbWithdrawals
                 << std::endl;
     return (true);
 }
