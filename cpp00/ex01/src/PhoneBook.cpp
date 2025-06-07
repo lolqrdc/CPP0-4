@@ -6,11 +6,12 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 09:05:46 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/30 10:18:11 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/07 09:06:59 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <iomanip>
 
 PhoneBook::PhoneBook(): nbContacts(0), ogContactIndex(0) {}
 
@@ -38,13 +39,14 @@ static std::string formated(const std:: string& str)
 
 void    PhoneBook::displayContacts() const
 {
-    std::cout << "Index | First Name | Last Name | Nickname" << std::endl;
+    std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
+    std::cout << "----------|----------|----------|----------" << std::endl;    
     int i = 0;
     while (i < nbContacts)
     {
-        std::cout << i + 1 << " | "
-                << formated(contacts[i].getFirstName()) << " | "
-                << formated(contacts[i].getLastName()) << " | "
+        std::cout << std::setw(10) << (i + 1) << "|"
+                << formated(contacts[i].getFirstName()) << "|"
+                << formated(contacts[i].getLastName()) << "|"
                 << formated(contacts[i].getNickname()) << std::endl;
         i++;
     }

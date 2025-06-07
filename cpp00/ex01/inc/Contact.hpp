@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 09:16:43 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/29 14:04:01 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/07 09:03:25 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class   Contact
     private:
     std::string  firstName;
     std::string  lastName;
-    std::string  phoneNum;
     std::string  nickname;
+    std::string  phoneNum;
     std::string  secret;
 
     public:

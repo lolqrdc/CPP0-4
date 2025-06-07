@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 09:14:16 by lolq              #+#    #+#             */
-/*   Updated: 2025/05/29 11:52:32 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/07 09:02:19 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Contact::Contact() {}
 Contact::Contact(const std::string& firstName, const std::string& lastName, 
                  const std::string& nickname, const std::string& phoneNum, 
                  const std::string& secret)
-    : firstName(firstName), lastName(lastName), phoneNum(phoneNum), nickname(nickname), secret(secret) {}
+    : firstName(firstName), lastName(lastName), nickname(nickname), phoneNum(phoneNum), secret(secret) {}
 
 void    Contact::setFirstName(const std::string& firstName)
 {
