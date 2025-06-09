@@ -1,5 +1,5 @@
 # NAME 
-NAME = cpp03
+NAME = Weapon
 
 # FLAGS
 CC = c++
@@ -10,9 +10,10 @@ RM = rm -f
 OBJ_DIR = obj
 
 # SOURCES
-SRCS = main.cpp \
-		HumanA.cpp \
-		humanB.cpp \
+SRCS = 	src/main.cpp \
+		src/HumanA.cpp \
+		src/HumanB.cpp \
+		src/Weapon.cpp \
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
