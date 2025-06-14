@@ -11,7 +11,7 @@ OBJ_DIR = obj
 
 # SOURCES
 SRCS = src/main.cpp \
-
+		src/ClapTrap.cpp \
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
@@ -19,19 +19,19 @@ OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-        @echo "Linking $(NAME)..."
-        $(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-        @echo "Compilation terminée."
+	@echo "Linking $(NAME)..."
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "Compilation terminée."
 
 $(OBJ_DIR)/%.o: %.cpp
-        @mkdir -p $(dir $@)
-        $(CC) $(CFLAGS) -c $< -o $@
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-        $(RM) -r $(OBJ_DIR)
+	$(RM) -r $(OBJ_DIR)
 
 fclean: clean
-        $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
