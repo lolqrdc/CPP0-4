@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 15:54:49 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/16 18:31:00 by lolq             ###   ########.fr       */
+/*   Created: 2025/06/16 18:34:02 by lolq              #+#    #+#             */
+/*   Updated: 2025/06/16 18:40:51 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
+#include <iostream>
+#include <string>
 #include "ClapTrap.hpp"
 
-int main()
-{
-    ClapTrap human = ClapTrap();
-    ClapTrap humanB = ClapTrap("Human"); 
-    human = humanB;
-     
-    human.takeDamage(4);
-    human.takeDamage(5);
-    human.beRepaired(20);
-    human.takeDamage(2);
-    human.takeDamage(2);
+class ScavTrap : public ClapTrap
+{    
+    public:
+        ScavTrap();
+        ScavTrap(const std::string& name);
+        ScavTrap(const ScavTrap& copy);
+        ScavTrap &operator=(const ScavTrap& set);
+        ~ScavTrap();
 
-    human.attack("HumanB");
-    return (0);
-}
-
+        void guardGate();
+        void attack(const std::string& target);  
+};

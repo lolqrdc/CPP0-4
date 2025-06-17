@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 15:54:46 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/16 16:07:28 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/16 18:33:36 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         int         _hitPoints;
         int         _energyPoints;
