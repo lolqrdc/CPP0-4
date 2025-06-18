@@ -6,7 +6,7 @@
 /*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:41:15 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/17 10:45:07 by lolq             ###   ########.fr       */
+/*   Updated: 2025/06/18 17:13:06 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void ScavTrap::attack(const std::string& target)
     else
     {
         std::cout << this->_name << " ScavTrap attack " << target << ", causing " << this->_attackDamage << " damage!" << std::endl;
+        this->_energyPoints -= 1;
         return ;
     }
 }
