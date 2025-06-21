@@ -44,5 +44,5 @@ WrongCat::~WrongCat()
 
 void	WrongCat::makeWrongSound() const
 {
-	std::cout << this->_wrongType << " Woof!?" << std::endl;
+	std::cout << this->_wrongType << " Miaou!? 😼" << std::endl;
 }

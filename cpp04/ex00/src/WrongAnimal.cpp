@@ -49,5 +49,5 @@ const std::string& WrongAnimal::getWrongType() const
 
 void	WrongAnimal::makeWrongSound() const
 {
-	std::cout << "guess what... the cat is woofing!?" << std::endl;
+	return ;
 }
