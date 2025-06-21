@@ -28,7 +28,7 @@ Cat::Cat(const std::string& type)
 Cat::Cat(const Cat& copy)
 {
 	this->_type = copy._type;
-	std::cout << this->_type << " Copy constructor is build 🔨" << std::endl;
+	std::cout << this->_type << " Copy constructor is called 🔨" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& op)

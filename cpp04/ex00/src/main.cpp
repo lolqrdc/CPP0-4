@@ -31,10 +31,14 @@ int main()
 	std::cout << i->getType() << " " << std::endl;
 
 	std::cout << "=== makeSound ===" << std::endl;
-	i->makeSound();
 	j->makeSound();
+	i->makeSound();
 	meta->makeSound();
 
+	std::cout << "=== destructeurs ===" << std::endl;
+	delete(meta);
+	delete(j);
+	delete(i);
 	std::cout << "=== WrongAnimal ===" << std::endl;
 	const WrongAnimal* wrongMeta = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
@@ -46,5 +50,9 @@ int main()
 	wrongMeta->makeWrongSound();
 	wrongCat->makeWrongSound();
 
+	std::cout << "=== (wrong) destructeurs ===" << std::endl;
+	delete(wrongMeta);
+	delete(wrongCat);
+	
 	return(0);
 }

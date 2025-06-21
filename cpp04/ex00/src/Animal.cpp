@@ -15,31 +15,31 @@
 Animal::Animal()
 {
 	this->_type = "Default";
-	std::cout << this->_type << " constructor is build 🔨" << std::endl;
+	std::cout << this->_type << " constructor is build" << std::endl;
 }
 
 Animal::Animal(const std::string& type)
 {
 	this->_type = type;
-	std::cout << this->_type << " constructor is build 🔨" << std::endl;
+	std::cout << this->_type << " constructor is build" << std::endl;
 }
 
 Animal::Animal(const Animal& copy)
 {
 	this->_type = copy._type;
-	std::cout << "Animal copy constructor is build 🔨" << std::endl;
+	std::cout << "Animal copy constructor is build" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& op)
 {
 	this->_type = op._type;
-	std::cout << "Copy assignement constructor called 🔨" << std::endl;
+	std::cout << "Copy assignement constructor called" << std::endl;
 	return (*this);
 }
 
 Animal::~Animal()
 {
-	std::cout << "Destructor is called 🪓" << std::endl;
+	std::cout << "Destructor is called" << std::endl;
 }
 
 const std::string& Animal::getType() const

@@ -27,13 +27,13 @@ WrongAnimal::WrongAnimal(const std::string& wrongType)
 WrongAnimal::WrongAnimal(const WrongAnimal& copy)
 {
 	this->_wrongType = copy._wrongType;
-	std::cout << "WrongAnimal copy constructor is build 🔨" << std::endl;
+	std::cout << "WrongAnimal copy constructor is build" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& op)
 {
 	this->_wrongType = op._wrongType;
-	std::cout << "Copy assignement constructor called 🔨" << std::endl;
+	std::cout << "Copy assignement constructor called" << std::endl;
 	return (*this);
 }
 
