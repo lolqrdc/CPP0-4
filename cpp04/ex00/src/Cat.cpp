@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
+/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-06-20 07:13:37 by loribeir          #+#    #+#             */
-/*   Updated: 2025-06-20 07:13:37 by loribeir         ###   ########.fr       */
+/*   Created: 2025/06/20 07:13:37 by loribeir          #+#    #+#             */
+/*   Updated: 2025/06/23 10:35:02 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ Cat& Cat::operator=(const Cat& op)
 	this->_type = op._type;
 	std::cout << "Copy assignement constructor called 🔨" << std::endl;
 	return (*this);
+}
+
+Cat::~Cat()
+{
+	std::cout << this->_type << " Destructor is called 🪓" << std::endl;
 }
 
 void	Cat::makeSound() const 
