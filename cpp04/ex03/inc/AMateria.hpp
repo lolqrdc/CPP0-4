@@ -20,17 +20,17 @@
 class AMateria
 {
     protected:
-        const std::string _type;
+        std::string _type;
     
     public:
     // forme canonique
         AMateria(const std::string& type);
         AMateria(const AMateria& copy);
         AMateria& operator=(const AMateria& op);
-        virtual AMateria* clone() const = 0;
         virtual ~AMateria();
     // getter
         const std::string& getType() const;
     // methodes
+        virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
 };
