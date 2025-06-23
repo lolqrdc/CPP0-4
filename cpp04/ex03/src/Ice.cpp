@@ -20,18 +20,18 @@ Ice::Ice(const Ice& copy) : AMateria(copy) {}
 Ice& Ice::operator=(const Ice& op)
 {
 	if (this != &op)
-		this->_type = op._type;
+		AMateria::operator=(op);
 	return (*this);
 }
 
 Ice::~Ice() {}
 
-AMateria* AMateria::clone() const
+AMateria* Ice::clone() const
 {
-	return new Ice;
+	return new Ice(*this);
 }
 
-void	AMateria::use(ICharacter& target)
+void	Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
