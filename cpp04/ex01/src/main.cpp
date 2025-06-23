@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
+/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-06-20 07:14:19 by loribeir          #+#    #+#             */
-/*   Updated: 2025-06-20 07:14:19 by loribeir         ###   ########.fr       */
+/*   Created: 2025/06/20 07:14:19 by loribeir          #+#    #+#             */
+/*   Updated: 2025/06/23 11:39:53 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,43 +16,37 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-    std::cout << "=== constructeurs ===" << std::endl;
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+    const int N = 6;
+    Animal* animals[N];
 
-	std::cout << "=== type ===" << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+    std::cout << "=== Constructor ===" << std::endl;
+    for (int i = 0; i < N / 2; ++i)
+        animals[i] = new Dog();
+    for (int i = N / 2; i < N; ++i)
+        animals[i] = new Cat();
 
-	std::cout << "=== makeSound ===" << std::endl;
-	j->makeSound();
-	i->makeSound();
-	meta->makeSound();
+    std::cout << "\n=== MakeSound ===" << std::endl;
+    for (int i = 0; i < N; ++i) {
+        std::cout << animals[i]->getType() << " : ";
+        animals[i]->makeSound();
+    }
 
-	std::cout << "=== destructeurs ===" << std::endl;
-	delete(meta);
-	delete(j);
-	delete(i);
-	std::cout << "=== WrongAnimal ===" << std::endl;
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* wrongCat = new WrongCat();
-
-	std::cout << "=== type ===" << std::endl;
-	std::cout << wrongCat->getWrongType() << " " << std::endl;
-
-	std::cout << "=== (wrong) MakeSound ===" << std::endl;
-	wrongMeta->makeWrongSound();
-	wrongCat->makeWrongSound();
-
-	std::cout << "=== (wrong) destructeurs ===" << std::endl;
-	delete(wrongMeta);
-	delete(wrongCat);
+    std::cout << "\n=== Destructor ===" << std::endl;
+    for (int i = 0; i < N; ++i)
+	{
+        delete animals[i];
+	}
+	std::cout << "\n=== Les copies profondes ===" << std::endl;
+	Dog	OgDog;
+	OgDog.getBrain()->setIdea(0, "Je veux une balle");
+	Dog copyDog = OgDog;
+	OgDog.getBrain()->setIdea(0, "Je veux jouer!");
+	std::cout << "L'idee 0 du dogo: " << OgDog.getBrain()->getIdea(0) << std::endl;
+	std::cout << "L'idee 0 de la copie dogo: " << copyDog.getBrain()->getIdea(0) << std::endl;
 	
-	return(0);
+    return 0;
 }
