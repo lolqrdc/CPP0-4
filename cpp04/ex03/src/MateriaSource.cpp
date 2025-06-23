@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
+/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-06-23 13:48:14 by loribeir          #+#    #+#             */
-/*   Updated: 2025-06-23 13:48:14 by loribeir         ###   ########.fr       */
+/*   Created: 2025/06/23 13:48:14 by loribeir          #+#    #+#             */
+/*   Updated: 2025/06/23 20:35:48 by lolq             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ MateriaSource::MateriaSource(const MateriaSource& copy)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_modeles[i] == copy._modeles[i])
+		if (copy._modeles[i])
 			_modeles[i] = copy._modeles[i]->clone();
 		else
 			_modeles[i] = NULL;
