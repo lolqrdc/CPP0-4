@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-06-23 12:34:09 by loribeir          #+#    #+#             */
-/*   Updated: 2025-06-23 12:34:09 by loribeir         ###   ########.fr       */
+/*   Created: 2025-06-23 13:55:43 by loribeir          #+#    #+#             */
+/*   Updated: 2025-06-23 13:55:43 by loribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
 #include <string>
+#include <iostream>
 
-#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
-class Cure : public AMateria
+class MateriaSource : public IMateriaSource
 {
-    public:
-	// forme canonique
-        Cure();
-        Cure(const Cure& copy);
-        Cure& operator=(const Cure& op);
-        virtual ~Cure();
+	private:
+		AMateria* _templates[4];
+	public:
 
-        virtual AMateria* clone() const;
-        virtual void use(ICharacter& target);
 };

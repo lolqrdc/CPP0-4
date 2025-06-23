@@ -21,6 +21,7 @@
 class Ice : public AMateria
 {
     public:
+	// forme canonique
         Ice();
         Ice(const Ice& copy);
         Ice& operator=(const Ice& op);

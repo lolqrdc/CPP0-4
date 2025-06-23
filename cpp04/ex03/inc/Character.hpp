@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-06-23 12:34:09 by loribeir          #+#    #+#             */
-/*   Updated: 2025-06-23 12:34:09 by loribeir         ###   ########.fr       */
+/*   Created: 2025-06-23 13:10:10 by loribeir          #+#    #+#             */
+/*   Updated: 2025-06-23 13:10:10 by loribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,26 @@
 #include <iostream>
 #include <string>
 
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-class Cure : public AMateria
+class Character : public ICharacter
 {
-    public:
-	// forme canonique
-        Cure();
-        Cure(const Cure& copy);
-        Cure& operator=(const Cure& op);
-        virtual ~Cure();
-
-        virtual AMateria* clone() const;
-        virtual void use(ICharacter& target);
+	private:
+		std::string _name;
+		AMateria* _inventory[4];
+	
+	public:
+	//forme canonique
+		Character(const std::string& name);
+		Character(const Character& copy);
+		Character& operator=(const Character& op);
+		virtual ~Character();
+	// getter
+		virtual const std::string& getName() const;
+	// methodes
+		virtual void equip(AMateria* m);
+    	virtual void unequip(int idx);
+    	virtual void use(int idx, ICharacter& target);
 };
+
