@@ -11,10 +11,11 @@
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 AMateria::AMateria(const std::string& type) : _type(type) {}
 
-AMateria::AMateria(const Amateria& copy) _type(copy._type) {}
+AMateria::AMateria(const AMateria& copy) : _type(copy._type) {}
 
 AMateria& AMateria::operator=(const AMateria& op)
 {

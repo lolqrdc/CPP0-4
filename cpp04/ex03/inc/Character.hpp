@@ -16,7 +16,7 @@
 #include <string>
 
 #include "ICharacter.hpp"
-#include "AMateria.hpp"
+class AMateria;
 
 class Character : public ICharacter
 {

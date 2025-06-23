@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "AMateria.hpp"
 
 Character::Character(const std::string& name) : _name(name)
 {
 	for (int i = 0; i < 4; i++)
-		_inventory[i] = nullptr;
+		_inventory[i] = NULL;
 }
 
 Character::Character(const Character& copy)
@@ -26,7 +27,7 @@ Character::Character(const Character& copy)
 		if (copy._inventory[i])
 			_inventory[i] = copy._inventory[i]->clone();
 		else
-			_inventory[i] = nullptr;
+			_inventory[i] = NULL;
 	}
 }
 
@@ -40,7 +41,7 @@ Character& Character::operator=(const Character& op)
 			if (_inventory[i])
 			{
 				delete _inventory[i];
-				_inventory[i] = nullptr;
+				_inventory[i] = NULL;
 			}
 		}
 	}
@@ -49,7 +50,7 @@ Character& Character::operator=(const Character& op)
 		if (op._inventory[i])
 			_inventory[i] = op._inventory[i]->clone();
 		else
-			_inventory[i] = nullptr;
+			_inventory[i] = NULL;
 	}
 	return (*this);
 }
@@ -61,7 +62,7 @@ Character::~Character()
 		if (_inventory[i])
 		{
 			delete _inventory[i];
-			_inventory[i] = nullptr;
+			_inventory[i] = NULL;
 		}
 	}
 }
@@ -89,7 +90,7 @@ void Character::unequip(int idx)
 {
 	if (idx < 0 || idx >= 4)
 		return ;
-	_inventory[idx] = nullptr;
+	_inventory[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target)
