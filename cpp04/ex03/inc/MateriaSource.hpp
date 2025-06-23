@@ -20,7 +20,13 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria* _templates[4];
+		AMateria* _modeles[4];
 	public:
+		MateriaSource();
+		MateriaSource(const MateriaSource& copy);
+		MateriaSource& operator=(const MateriaSource& op);
+		virtual ~MateriaSource();
 
+		virtual void learnMateria(AMateria* m);
+		virtual AMateria* createMateria(const std::string& type);
 };
