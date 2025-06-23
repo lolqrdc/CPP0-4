@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/23 13:27:25 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/23 13:38:48 by lolq             ###   ########.fr       */
+/*   Created: 2025-06-23 12:33:58 by loribeir          #+#    #+#             */
+/*   Updated: 2025-06-23 12:33:58 by loribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #pragma once
 
@@ -21,8 +22,8 @@ class Ice : public AMateria
 {
     public:
         Ice();
-        Ice(const Ice& other);
-        Ice& operator=(const Ice& other);
+        Ice(const Ice& copy);
+        Ice& operator=(const Ice& op);
         virtual ~Ice();
 
         virtual AMateria* clone() const;

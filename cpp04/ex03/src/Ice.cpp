@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/23 13:27:25 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/23 13:40:05 by lolq             ###   ########.fr       */
+/*   Created: 2025-06-23 12:34:23 by loribeir          #+#    #+#             */
+/*   Updated: 2025-06-23 12:34:23 by loribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "Ice.hpp"
 #include "ICharacter.hpp"

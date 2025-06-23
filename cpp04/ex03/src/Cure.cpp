@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolq <lolq@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: loribeir <loribeir@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/23 13:27:25 by lolq              #+#    #+#             */
-/*   Updated: 2025/06/23 13:40:22 by lolq             ###   ########.fr       */
+/*   Created: 2025-06-23 12:34:20 by loribeir          #+#    #+#             */
+/*   Updated: 2025-06-23 12:34:20 by loribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "Cure.hpp"
 #include "ICharacter.hpp"
