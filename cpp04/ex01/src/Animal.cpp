@@ -21,7 +21,7 @@ Animal::Animal()
 Animal::Animal(const std::string& type)
 {
 	this->_type = type;
-	std::cout << this->_type << " constructor is build" << std::endl;
+	std::cout << "Animal(" << this->_type << ") constructor is build" << std::endl;
 }
 
 Animal::Animal(const Animal& copy)
