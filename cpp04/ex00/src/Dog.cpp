@@ -15,7 +15,7 @@
 Dog::Dog()
 {
 	this->_type = "Dog";
-	std::cout << this->_type << " (default) constructor is build 🔨" << std::endl;
+	std::cout << this->_type << " constructor is build 🔨" << std::endl;
 }
 
 Dog::Dog(const std::string& type)

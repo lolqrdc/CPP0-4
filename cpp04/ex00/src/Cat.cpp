@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	this->_type = "Cat";
-	std::cout << this->_type << " (Default) constructor is called! 🔨" << std::endl;
+	std::cout << this->_type << " constructor is called! 🔨" << std::endl;
 }
 
 Cat::Cat(const std::string& type)

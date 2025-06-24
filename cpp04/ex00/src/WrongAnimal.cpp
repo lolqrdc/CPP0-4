@@ -39,7 +39,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& op)
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Destructor is called 🪓" << std::endl;
+	std::cout << " (WrongAnimal) destructor is called 🪓" << std::endl;
 }
 
 const std::string& WrongAnimal::getWrongType() const

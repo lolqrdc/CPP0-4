@@ -39,7 +39,7 @@ WrongCat& WrongCat::operator=(const WrongCat& op)
 
 WrongCat::~WrongCat()
 {
-	std::cout << "Destructor is called 🪓" << std::endl;
+	std::cout << "(Wrong Cat) destructor is called 🪓" << std::endl;
 }
 
 void	WrongCat::makeWrongSound() const
