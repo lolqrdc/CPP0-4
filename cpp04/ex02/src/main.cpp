@@ -22,6 +22,7 @@ int main()
 {
     const int N = 6;
     Animal* animals[N];
+	//Animal marchepo = new Animal();
 
     std::cout << "=== Constructor ===" << std::endl;
     for (int i = 0; i < N / 2; ++i)
